@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #343541;
+  color: #f3f4f6;
+  font-family: "Open Sans Variable", sans-serif;
+}
