@@ -1,3 +1,7 @@
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <div>App</div>
+    </div>
+  );
 };
