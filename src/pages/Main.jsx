@@ -139,9 +139,17 @@ export const Main = ({ user }) => {
           ) : (
             <>
               <span className="text-6xl">{currentTicket.ticket}</span>
-              <span className="text-lg mt-3">
-                {currentTicket.Nombre.split(" ")[0]}
-              </span>
+              <div className="flex flex-col items-center justify-center text-lg mt-3">
+                {!user ? (
+                  <span>{currentTicket.Nombre.split(" ")[0]}</span>
+                ) : (
+                  <>
+                    <span>{currentTicket.Nombre}</span>
+                    <span>+{currentTicket.cellphone}</span>
+                    <span>{currentTicket.time}</span>
+                  </>
+                )}
+              </div>
             </>
           )}
         </div>
