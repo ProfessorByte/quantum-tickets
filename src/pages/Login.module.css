@@ -1,0 +1,29 @@
+.title {
+  font-family: Michroma, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  @apply flex flex-col text-3xl text-center mb-3;
+}
+
+.formField {
+  @apply flex flex-col gap-1;
+}
+
+.formField input {
+  @apply p-2 border-2 border-green-500 rounded-3xl bg-[#202123] text-lg;
+}
+
+.sectionLogin {
+  @apply flex justify-center items-center h-screen;
+}
+
+.sectionLogin form {
+  @apply flex flex-col gap-6 text-lg bg-[#202123] p-6 rounded-3xl shadow-lg md:min-w-[30rem];
+}
+
+.sectionLogin form button {
+  @apply p-2 bg-green-500 text-[#202123] rounded-3xl mx-auto px-12 text-xl hover:bg-green-600 duration-300;
+}
+
+.error {
+  @apply text-red-500 text-sm text-center;
+}

@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@fontsource-variable/open-sans": "^5.0.29",
+    "@fontsource/michroma": "^5.0.20",
     "firebase": "^10.11.1",
+    "formik": "^2.4.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

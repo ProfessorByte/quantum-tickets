@@ -25,6 +25,6 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
-const appData = initializeApp(firebaseConfigData, "data");
+const appData = initializeApp(firebaseConfigData, "tickets-data");
 export const dbData = getFirestore(appData);
 export const authData = getAuth(appData);
