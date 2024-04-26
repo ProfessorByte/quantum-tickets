@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "./Login.module.css";
 
 const initialFormValues = {
@@ -9,10 +9,9 @@ const initialFormValues = {
   password: "",
 };
 
-export const Login = () => {
+export const Login = ({ login }) => {
   const [currentError, setCurrentError] = useState("");
   const navigate = useNavigate();
-  const { login } = useAuth();
 
   const handleSubmit = async (values, actions) => {
     try {
@@ -56,4 +55,8 @@ export const Login = () => {
       </Formik>
     </section>
   );
+};
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
 };

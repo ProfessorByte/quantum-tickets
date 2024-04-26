@@ -6,12 +6,14 @@ import { useAuth } from "./hooks/useAuth";
 import { Main } from "./pages/Main";
 import { Login } from "./pages/Login";
 import { ControlTickets } from "./pages/ControlTickets";
+import { NavBar } from "./components/NavBar";
 
 export const App = () => {
-  const { user, loading } = useAuth();
+  const { login, logout, loading, user } = useAuth();
 
   return (
     <BrowserRouter>
+      <NavBar user={user} logout={logout} />
       <Routes>
         <Route index element={<Main />} />
         <Route
@@ -19,7 +21,7 @@ export const App = () => {
             <ProtectedRoute loading={loading} isForUser={false} user={user} />
           }
         >
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login login={login} />} />
         </Route>
         <Route
           element={
