@@ -5,7 +5,7 @@ import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { useAuth } from "./hooks/useAuth";
 import { Main } from "./pages/Main";
 import { Login } from "./pages/Login";
-import { ControlTickets } from "./pages/ControlTickets";
+// import { ControlTickets } from "./pages/ControlTickets";
 import { NavBar } from "./components/NavBar";
 
 export const App = () => {
@@ -15,7 +15,7 @@ export const App = () => {
     <BrowserRouter>
       <NavBar user={user} logout={logout} />
       <Routes>
-        <Route index element={<Main />} />
+        <Route index element={<Main user={user} />} />
         <Route
           element={
             <ProtectedRoute loading={loading} isForUser={false} user={user} />
@@ -23,18 +23,7 @@ export const App = () => {
         >
           <Route path="/login" element={<Login login={login} />} />
         </Route>
-        <Route
-          element={
-            <ProtectedRoute
-              loading={loading}
-              isForUser={true}
-              user={user}
-              redirectTo="/login"
-            />
-          }
-        >
-          <Route path="/control-tickets" element={<ControlTickets />} />
-        </Route>
+        {/* <Route path="/control-tickets" element={<ControlTickets />} /> */}
         <Route path="*" element={<h1>Error 404</h1>} />
       </Routes>
     </BrowserRouter>
